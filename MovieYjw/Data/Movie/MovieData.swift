@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct MovieData : Codable {
-    let  boxOfficeResult : BoxOfficeResult
+struct MovieData: Codable {
+    let  boxOfficeResult: BoxOfficeResult
 }
 
-struct  BoxOfficeResult : Codable {
-    let  dailyBoxOfficeList : [DailyBoxOfficeList]
+struct BoxOfficeResult: Codable {
+    let  dailyBoxOfficeList: [DailyBoxOfficeList]
 }
 
-struct  DailyBoxOfficeList : Codable {
-    let  movieNm : String
-    let  audiCnt : String
+struct DailyBoxOfficeList: Codable {
+    let  movieNm: String
+    let  audiCnt: String
 }
