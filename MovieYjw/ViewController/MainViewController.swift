@@ -56,8 +56,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieTableViewCell
-        cell.movieName.text = dailyBoxOfficeList[indexPath.row].movieNm
-        cell.movieCount.text = "관객 수 : \(numberFormatter(num: dailyBoxOfficeList[indexPath.row].audiCnt))"
+        cell.name.text = dailyBoxOfficeList[indexPath.row].movieNm
+        cell.audience.text = "관객 수 : \(numberFormatter(num: dailyBoxOfficeList[indexPath.row].audiCnt))"
         return cell
     }
     

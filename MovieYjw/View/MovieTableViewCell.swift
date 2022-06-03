@@ -8,8 +8,8 @@
 import UIKit
 
 class MovieTableViewCell: UITableViewCell {
-    @IBOutlet weak var movieName: UILabel!
-    @IBOutlet weak var movieCount: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var audience: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

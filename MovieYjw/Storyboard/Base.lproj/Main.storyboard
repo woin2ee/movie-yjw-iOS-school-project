@@ -51,8 +51,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="movieCount" destination="GHt-fZ-8gU" id="7CG-pT-2of"/>
-                                            <outlet property="movieName" destination="wS3-ap-thS" id="SVW-lm-Tot"/>
+                                            <outlet property="audience" destination="GHt-fZ-8gU" id="7CG-pT-2of"/>
+                                            <outlet property="name" destination="wS3-ap-thS" id="SVW-lm-Tot"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

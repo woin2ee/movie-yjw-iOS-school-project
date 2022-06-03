@@ -32,6 +32,8 @@ struct MovieDataManager {
         self.url = URL(string: "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(Personal.API_KEY.rawValue)&targetDt=\(date)")
     }
     
+    // MARK: - Movie Data API
+    
     func fetchMovieList(completion: @escaping (Result<[DailyBoxOfficeList], APIRequestError>) -> Void) {
         guard let url = self.url else {
             return completion(.failure(.invalidURL))
