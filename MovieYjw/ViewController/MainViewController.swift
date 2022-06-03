@@ -36,14 +36,14 @@ class MainViewController: UIViewController {
     func numberFormatter(num: Int) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
-        return formatter.string(from: NSNumber(value: num))!
+        return formatter.string(from: NSNumber(value: num)) ?? String(num)
     }
     
     func numberFormatter(num: String) -> String {
         let formatter = NumberFormatter()
         guard let nsNum = formatter.number(from: num) else { return num }
         formatter.numberStyle = .decimal
-        return formatter.string(from: nsNum)!
+        return formatter.string(from: nsNum) ?? num
     }
 }
 
