@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XE4-wK-I5m">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ycx-4E-9lr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" id="5Vh-gc-l0N" customClass="MovieTableViewCell" customModule="MovieYjw" customModuleProvider="target">
@@ -64,6 +64,7 @@
                                             <outlet property="audienceAcc" destination="iX4-Qy-vOe" id="hgJ-th-niv"/>
                                             <outlet property="audienceCnt" destination="GHt-fZ-8gU" id="7CG-pT-2of"/>
                                             <outlet property="name" destination="wS3-ap-thS" id="SVW-lm-Tot"/>
+                                            <segue destination="Q0z-Y9-7zU" kind="show" identifier="HomeToSearchMovie" id="NFZ-N2-iir"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -78,13 +79,67 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ycx-4E-9lr" secondAttribute="bottom" id="sJu-Rh-s6T"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="brf-rv-1pk"/>
                     <connections>
                         <outlet property="movieTable" destination="Ycx-4E-9lr" id="ZEv-RQ-43N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="70"/>
+            <point key="canvasLocation" x="944.92753623188412" y="69.642857142857139"/>
+        </scene>
+        <!--Search Movie View Controller-->
+        <scene sceneID="iQy-Z2-JO4">
+            <objects>
+                <viewController id="Q0z-Y9-7zU" customClass="SearchMovieViewController" customModule="MovieYjw" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Th-6d-fjd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNP-Q3-KrQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vJk-iM-oX1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oNP-Q3-KrQ" firstAttribute="leading" secondItem="vJk-iM-oX1" secondAttribute="leading" id="FIz-vg-ThQ"/>
+                            <constraint firstItem="oNP-Q3-KrQ" firstAttribute="top" secondItem="vJk-iM-oX1" secondAttribute="top" id="oV4-WU-Tse"/>
+                            <constraint firstItem="vJk-iM-oX1" firstAttribute="trailing" secondItem="oNP-Q3-KrQ" secondAttribute="trailing" id="pZQ-FU-hyK"/>
+                            <constraint firstItem="vJk-iM-oX1" firstAttribute="bottom" secondItem="oNP-Q3-KrQ" secondAttribute="bottom" id="sdj-1v-YZD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uwF-m6-c1d"/>
+                    <connections>
+                        <outlet property="webView" destination="oNP-Q3-KrQ" id="96d-un-zaa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v91-VG-hqP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="70"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zJO-cH-I9S">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwI-mf-tJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XE4-wK-I5m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ztv-Z1-YFq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7Yj-6g-T36"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>

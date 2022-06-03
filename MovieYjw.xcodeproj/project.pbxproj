@@ -18,6 +18,7 @@
 		E849A8E5283DC22F001BAA36 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849A8E4283DC22F001BAA36 /* MovieTableViewCell.swift */; };
 		E849A8E9283DD1E4001BAA36 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849A8E8283DD1E4001BAA36 /* MovieData.swift */; };
 		E8A881E7284A170100F8BD3E /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A881E6284A170100F8BD3E /* NumberFormatter+.swift */; };
+		E8A881EE284A222900F8BD3E /* SearchMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A881ED284A222900F8BD3E /* SearchMovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E849A8E4283DC22F001BAA36 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		E849A8E8283DD1E4001BAA36 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 		E8A881E6284A170100F8BD3E /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
+		E8A881ED284A222900F8BD3E /* SearchMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E849A8D4283DBCA3001BAA36 /* HomeViewController.swift */,
+				E8A881ED284A222900F8BD3E /* SearchMovieViewController.swift */,
 				E82A9D962849F13F00FB0FE0 /* TableViewCell */,
 			);
 			path = View;
@@ -225,6 +228,7 @@
 				E82A9D992849F1EB00FB0FE0 /* MovieDataManager.swift in Sources */,
 				E849A8D3283DBCA3001BAA36 /* SceneDelegate.swift in Sources */,
 				E82A9D8F2849EEC200FB0FE0 /* Personal.swift in Sources */,
+				E8A881EE284A222900F8BD3E /* SearchMovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
