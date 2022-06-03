@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var movieTable: UITableView!
+    
     let movieDataManager = MovieDataManager()
     var dailyBoxOfficeList: [DailyBoxOfficeList] = []
     
@@ -17,6 +18,19 @@ class HomeViewController: UIViewController {
         movieTable.dataSource = self
         movieTable.delegate = self
         setupDailyBoxOfficeList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let vc = segue.destination as? SearchMovieViewController,
+            let index = movieTable.indexPathForSelectedRow?.row
+        else { return }
+        
+        vc.movieName = dailyBoxOfficeList[index].movieNm
     }
     
     func setupDailyBoxOfficeList() {
