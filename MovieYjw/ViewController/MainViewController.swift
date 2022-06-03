@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  MovieYjw
 //
 //  Created by Jaewon on 2022/05/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     @IBOutlet weak var movieTable: UITableView!
     let movieDataManager = MovieDataManager()
     var dailyBoxOfficeList: [DailyBoxOfficeList] = []
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 
 // MARK: - TableView Datasource & Delegate
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dailyBoxOfficeList.count
     }

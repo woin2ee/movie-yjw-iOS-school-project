@@ -8,14 +8,14 @@
 import Foundation
 
 struct MovieData: Codable {
-    let  boxOfficeResult: BoxOfficeResult
+    let boxOfficeResult: BoxOfficeResult
 }
 
 struct BoxOfficeResult: Codable {
-    let  dailyBoxOfficeList: [DailyBoxOfficeList]
+    let dailyBoxOfficeList: [DailyBoxOfficeList]
 }
 
 struct DailyBoxOfficeList: Codable {
-    let  movieNm: String
-    let  audiCnt: String
+    let movieNm: String
+    let audiCnt: String
 }
