@@ -18,4 +18,5 @@ struct BoxOfficeResult: Codable {
 struct DailyBoxOfficeList: Codable {
     let movieNm: String
     let audiCnt: String
+    let audiAcc: String
 }

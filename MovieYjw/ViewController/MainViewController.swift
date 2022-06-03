@@ -47,9 +47,20 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         cell.name.text = dailyBoxOfficeList[indexPath.row].movieNm
         
         let audiCnt = dailyBoxOfficeList[indexPath.row].audiCnt
-        cell.audience.text = "관객 수 : \(NumberFormatter().addComma(to: audiCnt))"
+        cell.audienceCnt.text = "어제 관객 수 : \(NumberFormatter().addComma(to: audiCnt))"
+        
+        let audiAcc = dailyBoxOfficeList[indexPath.row].audiAcc
+        cell.audienceAcc.text = "누적 관객 수 : \(NumberFormatter().addComma(to: audiAcc))"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "박스오피스"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
