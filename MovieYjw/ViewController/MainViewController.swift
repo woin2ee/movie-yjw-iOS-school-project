@@ -32,19 +32,6 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
-    func numberFormatter(num: Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        return formatter.string(from: NSNumber(value: num)) ?? String(num)
-    }
-    
-    func numberFormatter(num: String) -> String {
-        let formatter = NumberFormatter()
-        guard let nsNum = formatter.number(from: num) else { return num }
-        formatter.numberStyle = .decimal
-        return formatter.string(from: nsNum) ?? num
-    }
 }
 
 // MARK: - TableView Datasource & Delegate
@@ -56,8 +43,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieTableViewCell
+        
         cell.name.text = dailyBoxOfficeList[indexPath.row].movieNm
-        cell.audience.text = "관객 수 : \(numberFormatter(num: dailyBoxOfficeList[indexPath.row].audiCnt))"
+        
+        let audiCnt = dailyBoxOfficeList[indexPath.row].audiCnt
+        cell.audience.text = "관객 수 : \(NumberFormatter().addComma(to: audiCnt))"
+        
         return cell
     }
     
