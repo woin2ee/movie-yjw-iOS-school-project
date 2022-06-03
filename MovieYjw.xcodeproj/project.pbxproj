@@ -43,6 +43,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E82A9D902849F02400FB0FE0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E849A8D0283DBCA3001BAA36 /* AppDelegate.swift */,
+				E849A8D2283DBCA3001BAA36 /* SceneDelegate.swift */,
+				E849A8DE283DBCA4001BAA36 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E82A9D912849F03000FB0FE0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E82A9D8E2849EEC200FB0FE0 /* Personal.swift */,
+				E82A9D922849F03400FB0FE0 /* Movie */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E82A9D922849F03400FB0FE0 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				E849A8E8283DD1E4001BAA36 /* MovieData.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		E82A9D932849F04400FB0FE0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E849A8D6283DBCA3001BAA36 /* Main.storyboard */,
+				E849A8DB283DBCA4001BAA36 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E82A9D942849F0F700FB0FE0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E849A8D9283DBCA4001BAA36 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E82A9D952849F12D00FB0FE0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E849A8D4283DBCA3001BAA36 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E82A9D962849F13F00FB0FE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E849A8E4283DC22F001BAA36 /* MovieTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E849A8C4283DBCA2001BAA36 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +122,12 @@
 		E849A8CF283DBCA3001BAA36 /* MovieYjw */ = {
 			isa = PBXGroup;
 			children = (
-				E849A8D0283DBCA3001BAA36 /* AppDelegate.swift */,
-				E849A8D2283DBCA3001BAA36 /* SceneDelegate.swift */,
-				E849A8D4283DBCA3001BAA36 /* ViewController.swift */,
-				E849A8E8283DD1E4001BAA36 /* MovieData.swift */,
-				E849A8D6283DBCA3001BAA36 /* Main.storyboard */,
-				E82A9D8E2849EEC200FB0FE0 /* Personal.swift */,
-				E849A8E4283DC22F001BAA36 /* MovieTableViewCell.swift */,
-				E849A8D9283DBCA4001BAA36 /* Assets.xcassets */,
-				E849A8DB283DBCA4001BAA36 /* LaunchScreen.storyboard */,
-				E849A8DE283DBCA4001BAA36 /* Info.plist */,
+				E82A9D902849F02400FB0FE0 /* Application */,
+				E82A9D952849F12D00FB0FE0 /* ViewController */,
+				E82A9D962849F13F00FB0FE0 /* View */,
+				E82A9D932849F04400FB0FE0 /* Storyboard */,
+				E82A9D912849F03000FB0FE0 /* Data */,
+				E82A9D942849F0F700FB0FE0 /* Resource */,
 			);
 			path = MovieYjw;
 			sourceTree = "<group>";
