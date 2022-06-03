@@ -17,19 +17,12 @@ enum APIRequestError: Error {
 
 struct MovieDataManager {
     let successRange = 200..<300
-    var date: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd"
-        guard let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date()) else {
-            return formatter.string(from: Date())
-        }
-        
-        return formatter.string(from: yesterday)
-    }
+    let yesterday: String
     var url: URL?
     
     init() {
-        self.url = URL(string: "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(Personal.API_KEY.rawValue)&targetDt=\(date)")
+        self.yesterday = Date().toStringPrevDay(by: "yyyyMMdd") ?? ""
+        self.url = URL(string: "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(Personal.API_KEY.rawValue)&targetDt=\(yesterday)")
     }
     
     // MARK: - Movie Data API

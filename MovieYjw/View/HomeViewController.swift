@@ -70,7 +70,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "박스오피스"
+        let date = Date().toStringPrevDay(by: "yyyy년 MM월 dd일") ?? ""
+        return "박스오피스 (\(date) 자 기준)"
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
