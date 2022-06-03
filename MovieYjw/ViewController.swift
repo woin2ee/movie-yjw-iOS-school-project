@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     func fetchMovieList() {
         let successRange = 200..<300
-        guard let url = URL(string: "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(Storage.API_KEY.rawValue)&targetDt=\(date)") else { return }
+        guard let url = URL(string: "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(Personal.API_KEY.rawValue)&targetDt=\(date)") else { return }
         URLSession.shared.dataTask(with: url) { [self] data, response, error in
             guard let data = data, let response = response as? HTTPURLResponse, error == nil else {
                 debugPrint("데이터를 가져오지 못했습니다.")
