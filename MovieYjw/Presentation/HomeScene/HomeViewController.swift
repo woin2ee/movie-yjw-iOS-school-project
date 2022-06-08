@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var movieTable: UITableView!
     
     let movieDataManager = MovieDataManager()
-    var dailyBoxOfficeList: [DailyBoxOfficeList] = []
+    var dailyBoxOfficeList: [DailyBoxOfficeInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

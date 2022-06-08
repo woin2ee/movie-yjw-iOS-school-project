@@ -12,10 +12,10 @@ struct MovieData: Codable {
 }
 
 struct BoxOfficeResult: Codable {
-    let dailyBoxOfficeList: [DailyBoxOfficeList]
+    let dailyBoxOfficeList: [DailyBoxOfficeInfo]
 }
 
-struct DailyBoxOfficeList: Codable {
+struct DailyBoxOfficeInfo: Codable {
     let movieName: String
     let audienceCnt: String
     let audienceAcc: String

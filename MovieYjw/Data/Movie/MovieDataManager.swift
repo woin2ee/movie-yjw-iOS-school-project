@@ -19,7 +19,7 @@ struct MovieDataManager {
     
     // MARK: - Movie Data API
     
-    func fetchMovieList(completion: @escaping (Result<[DailyBoxOfficeList], APIRequestError>) -> Void) {
+    func fetchMovieList(completion: @escaping (Result<[DailyBoxOfficeInfo], APIRequestError>) -> Void) {
         guard let url = self.url else {
             return completion(.failure(.invalidURL))
         }
