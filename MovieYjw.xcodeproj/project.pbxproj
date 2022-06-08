@@ -19,6 +19,7 @@
 		E849A8E9283DD1E4001BAA36 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849A8E8283DD1E4001BAA36 /* MovieData.swift */; };
 		E8726EB4285034A8000C9013 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8726EB3285034A8000C9013 /* MapViewController.swift */; };
 		E8726EB928503759000C9013 /* DefaultWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8726EB828503759000C9013 /* DefaultWebView.swift */; };
+		E8726EBB28504B76000C9013 /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8726EBA28504B76000C9013 /* APIRequestError.swift */; };
 		E8A881E7284A170100F8BD3E /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A881E6284A170100F8BD3E /* NumberFormatter+.swift */; };
 		E8A881EE284A222900F8BD3E /* SearchMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A881ED284A222900F8BD3E /* SearchMovieViewController.swift */; };
 		E8A881F0284A577000F8BD3E /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A881EF284A577000F8BD3E /* Date+.swift */; };
@@ -39,6 +40,7 @@
 		E849A8E8283DD1E4001BAA36 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 		E8726EB3285034A8000C9013 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E8726EB828503759000C9013 /* DefaultWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWebView.swift; sourceTree = "<group>"; };
+		E8726EBA28504B76000C9013 /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
 		E8A881E6284A170100F8BD3E /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
 		E8A881ED284A222900F8BD3E /* SearchMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieViewController.swift; sourceTree = "<group>"; };
 		E8A881EF284A577000F8BD3E /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				E82A9D8E2849EEC200FB0FE0 /* Personal.swift */,
+				E8726EBA28504B76000C9013 /* APIRequestError.swift */,
 				E82A9D922849F03400FB0FE0 /* Movie */,
 			);
 			path = Data;
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8726EBB28504B76000C9013 /* APIRequestError.swift in Sources */,
 				E8726EB4285034A8000C9013 /* MapViewController.swift in Sources */,
 				E849A8E9283DD1E4001BAA36 /* MovieData.swift in Sources */,
 				E8A881E7284A170100F8BD3E /* NumberFormatter+.swift in Sources */,

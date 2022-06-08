@@ -16,7 +16,15 @@ struct BoxOfficeResult: Codable {
 }
 
 struct DailyBoxOfficeList: Codable {
-    let movieNm: String
-    let audiCnt: String
-    let audiAcc: String
+    let movieName: String
+    let audienceCnt: String
+    let audienceAcc: String
+    let openDate: String
+    
+    enum CodingKeys: String, CodingKey {
+        case movieName = "movieNm"
+        case audienceCnt = "audiCnt"
+        case audienceAcc = "audiAcc"
+        case openDate = "openDt"
+    }
 }

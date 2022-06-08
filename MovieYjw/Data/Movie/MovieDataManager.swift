@@ -7,22 +7,14 @@
 
 import Foundation
 
-enum APIRequestError: Error {
-    case invalidURL
-    case failureStatusCode
-    case missingData
-    case decodeError
-    case anyError(_: Error)
-}
-
 struct MovieDataManager {
     let successRange = 200..<300
-    let yesterday: String
+    let date: String
     var url: URL?
     
     init() {
-        self.yesterday = Date().toStringPrevDay(by: "yyyyMMdd") ?? ""
-        self.url = URL(string: "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(Personal.API_KEY.rawValue)&targetDt=\(yesterday)")
+        self.date = Date().toStringPrevDay(by: "yyyyMMdd") ?? ""
+        self.url = URL(string: "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(Personal.API_KEY.rawValue)&targetDt=\(date)")
     }
     
     // MARK: - Movie Data API

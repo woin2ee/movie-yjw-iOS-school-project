@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
             let index = movieTable.indexPathForSelectedRow?.row
         else { return }
         
-        vc.movieName = dailyBoxOfficeList[index].movieNm
+        vc.movieName = dailyBoxOfficeList[index].movieName
     }
     
     func setupDailyBoxOfficeList() {
@@ -58,13 +58,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieTableViewCell
         
-        cell.name.text = dailyBoxOfficeList[indexPath.row].movieNm
+        let movieName = dailyBoxOfficeList[indexPath.row].movieName
+        cell.name.text = movieName
         
-        let audiCnt = dailyBoxOfficeList[indexPath.row].audiCnt
+        let audiCnt = dailyBoxOfficeList[indexPath.row].audienceCnt
         cell.audienceCnt.text = "어제 관객 수 : \(NumberFormatter().addComma(to: audiCnt))"
         
-        let audiAcc = dailyBoxOfficeList[indexPath.row].audiAcc
+        let audiAcc = dailyBoxOfficeList[indexPath.row].audienceAcc
         cell.audienceAcc.text = "누적 관객 수 : \(NumberFormatter().addComma(to: audiAcc))"
+        
+        let openDate = dailyBoxOfficeList[indexPath.row].openDate
+        cell.openDate.text = "개봉일 : \(openDate)"
         
         return cell
     }
